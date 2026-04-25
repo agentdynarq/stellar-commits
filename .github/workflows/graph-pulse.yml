@@ -1,0 +1,42 @@
+name: ⚡ Graph Pulse
+
+on:
+  schedule:
+    # Fires 3x daily at varied times — keeps the graph alive and breathing
+    - cron: "17 6 * * *"   # 06:17 UTC — morning pulse
+    - cron: "42 13 * * *"  # 13:42 UTC — afternoon pulse
+    - cron: "58 21 * * *"  # 21:58 UTC — night pulse
+  workflow_dispatch:        # manual trigger anytime
+
+permissions:
+  contents: write
+
+jobs:
+  pulse:
+    name: Update Graph
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛸 Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 📦 Install deps
+        run: pip install -r scripts/requirements.txt
+
+      - name: ⚡ Run updater
+        run: python scripts/updater.py
+
+      - name: 🚀 Commit & Push
+        run: |
+          git config user.name  "Graph Pulse Bot"
+          git config user.email "pulse-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "$(python scripts/commit_message.py)"
+          git push
