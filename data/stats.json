@@ -1,15 +1,10 @@
 {
-  "total_commits": 130,
+  "total_commits": 131,
   "streak_days": 1,
   "last_date": "2026-06-08",
   "constellation_index": 5,
-  "star_seed": 1344310504,
+  "star_seed": 514317513,
   "history": [
-    {
-      "ts": "2026-05-09T14:36:42.333040+00:00",
-      "commits": 41,
-      "constellation": "Scorpius"
-    },
     {
       "ts": "2026-05-09T22:30:20.166743+00:00",
       "commits": 42,
@@ -453,6 +448,11 @@
     {
       "ts": "2026-06-08T11:20:54.242232+00:00",
       "commits": 130,
+      "constellation": "Perseus"
+    },
+    {
+      "ts": "2026-06-08T16:58:21.322528+00:00",
+      "commits": 131,
       "constellation": "Perseus"
     }
   ]
