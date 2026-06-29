@@ -1,15 +1,10 @@
 {
-  "total_commits": 192,
+  "total_commits": 193,
   "streak_days": 1,
-  "last_date": "2026-06-28",
-  "constellation_index": 1,
-  "star_seed": 712654442,
+  "last_date": "2026-06-29",
+  "constellation_index": 2,
+  "star_seed": 3894775459,
   "history": [
-    {
-      "ts": "2026-05-30T08:41:02.507561+00:00",
-      "commits": 103,
-      "constellation": "Cygnus"
-    },
     {
       "ts": "2026-05-30T14:54:34.076587+00:00",
       "commits": 104,
@@ -454,6 +449,11 @@
       "ts": "2026-06-28T22:50:29.966209+00:00",
       "commits": 192,
       "constellation": "Cassiopeia"
+    },
+    {
+      "ts": "2026-06-29T11:23:37.996659+00:00",
+      "commits": 193,
+      "constellation": "Ursa Major"
     }
   ]
 }
